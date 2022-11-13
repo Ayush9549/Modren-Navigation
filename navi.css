@@ -1,0 +1,139 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: arial,sans-serif;
+}
+
+html,body
+{
+  width: 100%;
+  height:100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+body
+{
+ background: rgb(34,35,39);
+}
+
+.container
+{
+  background: #fff;
+  width: 400px;
+  height: 70px;
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+img
+{
+  width: 25px;
+}
+
+.container ul
+{
+  display: flex;
+  width: 350px;
+}
+
+.container ul li
+{
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.container ul li a
+{
+  position: relative;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction: column; 
+  width: 100%;
+  text-align: center;
+  font-weight: 500;
+}
+
+.container ul li a .icon
+{
+  position: relative;
+  display: block;
+  line-height: 75px;
+  font-size: 1.5em;
+  text-align: center;
+  transition: 0.5s;
+  color: rgb(34,35,39);
+}
+
+#icon1
+{
+  margin-top: -35px;
+}
+
+.container ul li a .text
+{
+  position: absolute;
+  color: #000;
+  font-size: 0.75em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  margin-left: 1px;
+  margin-top: -15px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+#text1
+{
+  opacity: 1;
+  margin-top: 20px;
+}
+
+.circle
+{
+  position: absolute;
+  top: -50%;
+  width: 70px;
+  height: 70px;
+  background: rgb(41,253,83);
+  border-radius:50%;
+  border:6px solid rgb(34,35,37);
+  transition: 0.5s;
+}
+
+.circle::before
+{
+  content:'';
+  position: absolute;
+  width:20px;
+  height:20px;
+  top:50%;
+  left: -22px;
+  background: transparent;
+  border-top-right-radius: 20px;
+  box-shadow: 0px -10px 0 0 rgb(34,35,37);
+}
+
+.circle::after
+{
+  content:'';
+  position: absolute;
+  width:20px;
+  height:20px;
+  top: 50%;
+  right: -22px;
+  background: transparent;
+  border-top-left-radius: 20px;
+  box-shadow: 0px -10px 0 0 rgb(34,35,37);
+}
